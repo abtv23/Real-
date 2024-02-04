@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const {authenticateUser, authorizeUser} = require('./auth')
 const {
+    checkUserRegister,
     userRegister,
     userLogin,
     userLogout,
@@ -27,7 +28,7 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 })
 
-app.post('/user/register', userRegister);
+app.post('/user/register', checkUserRegister, userRegister);
 app.post('/user/login', userLogin);
 app.get('/user/logout', userLogout);
 app.get('/user/me', authenticateUser, getUserData);
