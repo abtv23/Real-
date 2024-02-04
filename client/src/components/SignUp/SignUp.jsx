@@ -1,48 +1,67 @@
-import {useContext, useState} from "react"
+import { useContext, useState } from "react"
 import useForm from "../../hooks/useForm"
 import Button from "react-bootstrap/esm/Button"
 import Card from "react-bootstrap/Card"
 import styles from './SignUp.module.css'
-import {Link} from "react-router-dom"
-import {signup} from "../../services/authService.js";
+import { Link } from "react-router-dom"
+import { signup } from "../../services/authService.js";
 import LoaderContext from "../../contexts/loaderContext.js";
+import AuthContext from "../../contexts/authContext.js"
+
+// User::
+// :userId*
+// :email*
+// :fullName*
+// :phoneNumber*
+// :type - individual, agency, (admin)*
+// :+photo+(optional)
+// :description(optional)
+// :address(optional)
+// :instagram/facebook(optional)
 
 const RegisterFormKeys = {
     Name: 'name',
     Email: 'email',
+    PhoneNumber: 'phoneNumber',
+    ProfileType: 'profileType',
     Password: 'password',
-    Username: 'username',
     ConfirmedPassword: 'confirmedPassword',
 }
 export default function SignUp() {
-    const {setLoading} = useContext(LoaderContext)
+    const { setLoading } = useContext(LoaderContext)
     // TODO: add local form error
-    const [hasError, setError] = useState({hasError: false, message: ''})
-
+    const [hasError, setError] = useState({ hasError: false, message: '' })
+    const {loginSubmitHandler} = useContext(AuthContext)
     const registerSubmitHandler = async (values) => {
         if (values[RegisterFormKeys.ConfirmedPassword] === values[RegisterFormKeys.Password]) {
             try {
-                setLoading({isLoading: true})
-                await signup(values)
+                setLoading({ isLoading: true })
+                await signup({
+                    fullName: values[RegisterFormKeys.Name],
+                    email: values[RegisterFormKeys.Email],
+                    password: values[RegisterFormKeys.Password],
+                    profileType: values[RegisterFormKeys.ProfileType],
+                    phoneNumber: values[RegisterFormKeys.PhoneNumber],
+                })
                 await loginSubmitHandler(values)
             } catch (e) {
-                setError({hasError: true, message: e.message})
+                setError({ hasError: true, message: e.message })
             } finally {
-                setLoading({isLoading: false})
+                setLoading({ isLoading: false })
 
             }
         } else {
-            setError({hasError: true, message: "Паролите не съвпадат, моля опитайте отново."})
+            setError({ hasError: true, message: "Паролите не съвпадат, моля опитайте отново." })
         }
 
     }
 
-    const {values, onChange, onSubmit} = useForm(registerSubmitHandler, {
+    const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
         [RegisterFormKeys.Name]: '',
         [RegisterFormKeys.Email]: '',
-        [RegisterFormKeys.Username]: '',
         [RegisterFormKeys.Password]: '',
-        [RegisterFormKeys.ConfirmedPassword]: ''
+        [RegisterFormKeys.ConfirmedPassword]: '',
+        [RegisterFormKeys.ProfileType]: ''
     })
 
     return (
@@ -73,17 +92,30 @@ export default function SignUp() {
                             value={values[RegisterFormKeys.Email]}
                             className={styles["registration-input"]}
                         />
-                        <label htmlFor="username"></label>
+                        <label htmlFor="phoneNumber"></label>
                         <input
-                            placeholder="Потребителско име"
+                            placeholder="Телефонен номер"
                             required
-                            type="text"
-                            id="username"
-                            name="username"
+                            type="tel"
+                            id="phoneNumber"
+                            name="phoneNumber"
                             onChange={onChange}
-                            value={values[RegisterFormKeys.Username]}
+                            value={values[RegisterFormKeys.PhoneNumber]}
                             className={styles["registration-input"]}
                         />
+                        <label htmlFor="profileType"></label>
+                        <select
+                            required
+                            id="profileTypr"
+                            name="profileType"
+                            onChange={onChange}
+                            className={styles["registration-input"]}
+
+                        >
+                            <option value="" disabled selected hidden>Тип профил</option>
+                            <option value="individual">Частно лице</option>
+                            <option value="agency">Агенция</option>
+                        </select>
                         <label htmlFor="password"></label>
                         <input
                             placeholder="Парола"
@@ -108,7 +140,7 @@ export default function SignUp() {
                         />
 
                         <Button className={styles["signup-button"]} variant="primary" type="submit"
-                                value="Регистрирай">Регистрирай</Button>
+                            value="Регистрирай">Регистрирай</Button>
 
                         <div>
                             <p>Вече имате профил? <Link to='/login'>Влезте в профила си</Link></p>

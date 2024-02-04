@@ -54,10 +54,8 @@ function App() {
 
   const authContextValues = {
     loginSubmitHandler,
-    email: auth.email,
     isAuthenticated: !!auth.accessToken,
     token: auth.accessToken,
-    ownerId: auth._id,
     setAuth
   }
 
