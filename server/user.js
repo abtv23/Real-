@@ -74,7 +74,7 @@ const getUserData = async (req, res) => {
     try {
         // Check if the email is already registered
         const usersCollection = MongoDB.collection('users');
-        const query = {email: req.userId};
+        const query = {_id: req.userId};
         const loggedInUser = await usersCollection.findOne(query);
 
         res.status(200).json(loggedInUser);
