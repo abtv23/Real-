@@ -95,14 +95,6 @@ body {
   width: 100px;
   height: 24px;
 }
-/* 
-#rooms {
-  margin-top: 30px;
-  padding-left: 2px;
-  padding-right: 15px;
-  width: 180px;
-  height: 30px;
-} */
 
 #offer-type {
   padding-left: 2px;
@@ -125,59 +117,10 @@ body {
   cursor: pointer;
 }
 
-/* .best-offers {
-  width: 450px;
-  height: 295px;
-  border: solid 1px rgb(112, 112, 112);
-  border-radius: 7px;
-  text-decoration: none;
-  color: black;
-  font-size: 14px;
-} */
-/* 
-.best-offers-list {
-  width: -webkit-fill-available;
-  margin-top: 10px;
-  margin-bottom: 70px;
-  display: flex inline;
-  column-gap: 40px;
-  row-gap: 40px;
-  justify-content: center;
-  flex-wrap: wrap;
-} */
-
-.navigation {
-  background-color: #6385a8;
-  height: 40px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  column-gap: 20px;
-  z-index: 10;
-  position: sticky;
-  justify-content: space-between;
-}
-
 .home-link {
   position: relative;
   left: 30px;
 }
-
-/* .signup-link {
-  position: relative;
-  right: 30px;
-}
-
-.add-offer-link {
-  position: relative;
-  right: 30px;
-}
-.login-link {
-  position: relative;
-  right: 30px;
-} */
-
 .nav-link {
   text-decoration: none;
   color: white;
@@ -194,281 +137,11 @@ body {
   margin-bottom: 15px;
 }
 
-/* .short-offer-description {
-  width: 380px;
-  height: 50px;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
-} */
-
-/* .short-offer-description-li {
-  position: relative;
-  top: 50px;
-} */
-
-/* .offer-title {
-  text-align: center;
-  margin-top: 5px;
-} */
-
-/* .offer-heading-img {
-  width: 180px;
-  height: 130px;
-  position: relative;
-  top: -190px;
-  left: 20px;
-  z-index: 0;
-} */
-
-/* .offer-characteristics {
-  position: relative;
-} */
-
-/* .right-positioned-specs {
-  position: relative;
-  left: 190px;
-  top: 10px;
-} */
-
-.offer-list-title {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 30px;
-}
-
-header {
-  position: sticky;
-  top: 0px;
-  z-index: 10;
-}
-
-/* .login-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 500px;
-  padding-bottom: 3.5rem;
-  min-height: 91.9vh;
-} */
-
-/* .login-form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
-  row-gap: 20px;
-  width: 260px;
-  height: 140px;
-} */
-
-/* .login-form-card {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
-  row-gap: 20px;
-  width: 350px;
-  height: 200px;
-} */
-
-/* .signup-form-wrapper {
-  display: flex;
-  align-content: center;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 600px;
-  position: relative;
-  min-height: 91.9vh;
-} */
-
-/* .signup-form-card {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: 500px;
-  height: 400px;
-  margin-bottom: 3.5rem;
-} */
-
-
-/* .signup-form {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-  width: 500px;
-  height: 400px;
-  margin: auto;
-  column-gap: 60px;
-  flex-direction: column;
-} */
-
-/* .link-to-offer {
-  position: relative;
-  top: 40px;
-} */
-
-/* .photo-container {
-  border: solid 1px;
-  width: 500px;
-  height: 300px;
-  margin-left: 30px;
-} */
-
-/* .offer-details {
-  width: 700px;
-  height: 500px;
-} */
-
-/* .offer-wrapper {
-  display: flex;
-} */
-
-/* .add-new-offer-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 500px;
-  height: 530px;
-} */
-
-/* .add-new-offer-form {
-  width: 500px;
-  height: 500px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  row-gap: 10px;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .my-offers-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-
-} */
-
-/* .my-offers-list-wrapper {
-
-  display: flex;
-  align-content: center;
-  width: 100%;
-  flex-direction: column;
-  row-gap: 20px;
-  position: relative;
-  min-height: 91.9vh;
-  flex-wrap: wrap;
-  align-items: center;
-  width: calc(100vw - 20px);
-  overflow: hidden;
-} */
-
-/* .btn-edit-offer {
-  position: relative;
-  top: 40px;
-  left: 10px;
-} */
-
-/* .btn-delete-offer {
-  position: relative;
-  top: 40px;
-  left: 15px;
-} */
-
-#guest-navigation {
-  display: flex;
-  column-gap: 10px;
-  right: 30px;
-  position: relative;
-}
-
-#user-navigation {
-  display: flex;
-  column-gap: 10px;
-  right: 30px;
-  position: relative;
-}
-
-/* footer {
-  background-color: #6385a8;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-} */
-
-/* .footer-text {
-  text-align: center;
-  font-size: 13px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-} */
-
-/* .add-offer-link {
-  text-decoration: none;
-  color: white;
-} */
-
-/* .alert {
-  visibility: hidden;
-  width: 500px;
-  align-self: center;
-}
-
-.show-alert {
-  visibility: visible;
-} */
-
-/* .alert-wrapper {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-} */
-
 .profile-wrapper {
   display: flex;
   justify-content: center;
   position: relative;
   min-height: 91.9vh;
-}
-
-/* .create-offer-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  min-height: 91.9vh;
-} */
-
-.offer-wrapper {
-
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
-  position: relative;
-  min-height: 91.9vh;
-  width: 100%;
-  flex-wrap: wrap;
-  align-content: space-between;
-  width: calc(100vw - 20px);
-  overflow: hidden;
 }
 
 .loader-wrapper {
@@ -487,12 +160,62 @@ header {
   backdrop-filter: blur(10px);
 }
 
-/* .link-to-edit-offer {
-  text-decoration: none;
-  color: white;
-} */
 
-/* .link-to-delete-offer {
+.navigation {
+  background-color: #6385a8;
+  height: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  column-gap: 20px;
+  z-index: 10;
+  position: sticky;
+  justify-content: space-between;
+}
+
+#user-navigation {
+  display: flex;
+  column-gap: 10px;
+  right: 30px;
+  position: relative;
+}
+
+.nav-link {
   text-decoration: none;
   color: white;
-} */
+
+}
+
+#guest-navigation {
+  display: flex;
+  column-gap: 10px;
+  right: 30px;
+  position: relative;
+}
+
+.signup-link {
+  position: relative;
+  right: 30px;
+}
+
+.login-link {
+  position: relative;
+  right: 30px;
+}
+
+.add-offer-link {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+
+.home-link {
+  position: relative;
+  left: 30px;
+}

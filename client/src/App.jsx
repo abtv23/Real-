@@ -91,8 +91,6 @@ function App() {
               <Route path="/myprofile" element={<Profile />}></Route>
 
             </Routes>
-
-            <Footer />
           </>
         </AuthContext.Provider>
       </ErrorContext.Provider>

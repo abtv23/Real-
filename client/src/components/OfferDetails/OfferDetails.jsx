@@ -9,7 +9,7 @@ export default function OfferDetails({ isLoading, propertyDetails }) {
     }
 
     return (
-        <div className={styles["offer-wrapper-page"]}>
+        <div className={styles["offer-details-page"]}>
             <h1 className={styles["offer-title"]}>{propertyDetails.propertyType}</h1>
             <div className={styles["offer-details"]}>
 
