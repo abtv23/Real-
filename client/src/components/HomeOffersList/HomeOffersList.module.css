@@ -1,29 +1,22 @@
 .offer-list-title {
+  display: block;
   text-align: center;
   margin-top: 30px;
   font-size: 30px;
 }
 
 .best-offers-list {
-  /* width: -webkit-fill-available; */
-  margin-top: 10px;
   margin-bottom: 70px;
-  display: flex inline;
+  display: flex;
   column-gap: 40px;
   row-gap: 40px;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width: 1430px;
   padding-top: 30px;
+  width: calc(80vw);
 }
 
 .offer-list-wrapper {
-  /* width: calc(100vw - 20px); */
-  overflow: hidden;
   display: flex;
   justify-content: center;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 3.5rem;
 }

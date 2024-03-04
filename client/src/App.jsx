@@ -18,7 +18,7 @@ import MyOffers from './components/MyOffers/MyOffers'
 import CreateOffer from './components/CreateOffer/CreateOffer'
 import MyOfferPage from './components/MyOfferPage'
 import EditOfferForm from './components/EditOfferForm/EditOfferForm'
-import Profile from './components/Profile'
+import Profile from './components/Profile/Profile'
 import ErrorPopup from './components/ErrorPopup/ErrorPopup'
 import Loader from './components/Loader'
 import LoaderContext from './contexts/loaderContext'
@@ -54,10 +54,8 @@ function App() {
 
   const authContextValues = {
     loginSubmitHandler,
-    email: auth.email,
     isAuthenticated: !!auth.accessToken,
     token: auth.accessToken,
-    ownerId: auth._id,
     setAuth
   }
 
@@ -93,8 +91,6 @@ function App() {
               <Route path="/myprofile" element={<Profile />}></Route>
 
             </Routes>
-
-            <Footer />
           </>
         </AuthContext.Provider>
       </ErrorContext.Provider>
